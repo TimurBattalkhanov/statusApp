@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: status-app-deployment
+  labels:
+    app: status-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: status-app
+  template:
+    metadata:
+      labels:
+        app: status-app
+    spec:
+      containers:
+        - name: status-app
+          image: docker.io/timur2906/docker-app-for-otus:latest
+          ports:
+            - containerPort: 8000
