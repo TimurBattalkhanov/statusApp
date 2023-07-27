@@ -1,4 +1,4 @@
-package kz.otuslesson.timur;
+package kz.otuslesson.timur.dto;
 
 public class StatusDto {
     private String status;
