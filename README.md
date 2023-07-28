@@ -11,7 +11,7 @@ kubectl create namespace m && helm repo add ingress-nginx https://kubernetes.git
 kubectl apply -f ./manifest/
 
 Если в качестве кластера используется minikube в докере (driver=docker), то необходимо открыть порт к контейнеру в котором запущен minikube
-kubectl port-forward svc/nginx-ingress-nginx-controller -n m 80:80
+kubectl port-forward svc/nginx-ingress-nginx-controller -n m 80:80 (имя сервиса nginx-ingress-nginx-controller в вашем случае может отличаться)
 
 Если работа приложения тестируется на локальной машине, то необходимо в файл /etc/hosts добавить запись
 arch.homework 127.0.0.1
